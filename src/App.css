@@ -875,6 +875,7 @@ section:nth-child(even) {
 
   .skills-grid {
     grid-template-columns: 1fr;
+    padding: 0 1rem;
   }
 
   .projects-grid {
@@ -1113,6 +1114,12 @@ a:focus {
 .projects-section,
 .contact-section {
   padding: 8rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 60px 20px;
+  }
 }
 
 /* Enhanced Card Effects */
