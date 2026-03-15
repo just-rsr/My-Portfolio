@@ -33,7 +33,7 @@ export default function About() {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0 }}
       >
         <Reveal>
           <motion.h2 
