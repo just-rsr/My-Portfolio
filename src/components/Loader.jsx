@@ -162,7 +162,7 @@ export default function Loader({ show = true }) {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              JESSE
+                RANIT SRIVASTAVA
             </motion.h1>
 
             {/* Subtitle */}
@@ -178,7 +178,7 @@ export default function Loader({ show = true }) {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              Full Stack Developer
+              Software Engineer
             </motion.p>
 
             {/* Loading Text */}

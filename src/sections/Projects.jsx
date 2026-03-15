@@ -3,7 +3,7 @@ import Reveal from '../Reveal.jsx';
 
 export default function Projects({ projects }) {
   return (
-    <section className="projects-section">
+    <section id="projects" className="projects-section">
       <Reveal>
         <h2 className="projects-title">Projects</h2>
       </Reveal>

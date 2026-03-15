@@ -82,7 +82,7 @@ export default function Hero3D() {
               ease: "easeInOut"
             }}
           >
-            Jesse
+            RANIT SRIVASTAVA
           </motion.h1>
         </motion.div>
 
@@ -108,7 +108,7 @@ export default function Hero3D() {
               ease: "easeInOut"
             }}
           >
-            Full Stack Developer
+            Software Engineer
           </motion.h2>
         </motion.div>
 
@@ -144,6 +144,7 @@ export default function Hero3D() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2 }}
         >
+          <a href="#projects">
           <motion.button
             className="hero-cta-enhanced"
             style={{
@@ -186,7 +187,7 @@ export default function Hero3D() {
             >
               Explore My Work →
             </motion.span>
-          </motion.button>
+          </motion.button></a>
         </motion.div>
 
         {/* Floating Elements */}

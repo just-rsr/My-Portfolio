@@ -2,8 +2,15 @@ import { motion } from 'framer-motion';
 import Reveal from '../Reveal.jsx';
 
 const skills = [
-  { name: 'React', icon: '⚛️', level: 95, color: '#61DAFB' },
-  { name: 'Node.js', icon: '🟢', level: 90, color: '#339933' },
+  { name: 'Java', icon: '☕', level: 85, color: '#f89820' },
+{ name: 'Python', icon: '🐍', level: 90, color: '#3776AB' },
+  { name: 'Rust', icon: '🦀', level: 90, color: '#DEA584' },
+{ name: 'Machine Learning', icon: '🧮', level: 80, color: '#FF6F00' },
+{ name: 'Artificial Intelligence', icon: '🤖', level: 75, color: '#8E44AD' },
+{ name: 'LLM Engineering', icon: '🧠', level: 80, color: '#00A67E' },
+{ name: 'System Design', icon: '🏗️', level: 85, color: '#3498DB' },
+{ name: 'React', icon: '⚛️', level: 95, color: '#61DAFB' },
+{ name: 'Node.js', icon: '🟢', level: 90, color: '#339933' },
   { name: 'TypeScript', icon: '📘', level: 88, color: '#3178C6' },
   { name: 'JavaScript', icon: '🟡', level: 95, color: '#F7DF1E' },
   { name: 'CSS3', icon: '🎨', level: 92, color: '#1572B6' },
@@ -13,7 +20,9 @@ const skills = [
   { name: 'Git', icon: '📝', level: 88, color: '#F05032' },
   { name: 'Docker', icon: '🐳', level: 80, color: '#2496ED' },
   { name: 'AWS', icon: '☁️', level: 75, color: '#FF9900' },
-  { name: 'Figma', icon: '🎯', level: 85, color: '#F24E1E' }
+  { name: 'Monaco Editor', icon: '💻', level: 80, color: '#007ACC' },
+{ name: 'Distributed Systems', icon: '🌐', level: 80, color: '#1ABC9C' },
+{ name: 'Compiler Design', icon: '⚙️', level: 85, color: '#E67E22' }
 ];
 
 export default function Skills() {

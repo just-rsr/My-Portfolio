@@ -82,9 +82,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              Hi! I'm <span className="highlight">Jesse</span>, a passionate Full Stack Developer with a love for creating 
-              beautiful and performant web applications. I specialize in modern web technologies 
-              and enjoy turning complex problems into simple, elegant solutions.
+              Hi! I'm <span className="highlight">Ranit</span>, Software Engineer passionate about building scalable systems and intelligent applications. I enjoy solving complex problems and turning ideas into efficient, real-world software.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: -20 }}
@@ -92,7 +90,9 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              With expertise in <span className="tech-highlight">React</span>, <span className="tech-highlight">Node.js</span>, and modern development practices, 
+              My expertise includes <span className="tech-highlight">Data Structures & Algorithms</span>, 
+    <span className="tech-highlight"> Artificial Intelligence & Machine Learning</span>, and <span className="tech-highlight"> Modern Backend and Web Development.  </span> 
+    
               I build applications that not only look great but also provide exceptional 
               user experiences. I'm always eager to learn new technologies and take on 
               challenging projects that push the boundaries of what's possible on the web.
@@ -105,17 +105,14 @@ export default function About() {
               viewport={{ once: true }}
             >
               <div className="stat">
-                <span className="stat-number">3+</span>
-                <span className="stat-label">Years Experience</span>
+                <span className="stat-number">500+</span>
+                <span className="stat-label">Leetcode Questions</span>
               </div>
               <div className="stat">
-                <span className="stat-number">50+</span>
+                <span className="stat-number">5+</span>
                 <span className="stat-label">Projects Completed</span>
               </div>
-              <div className="stat">
-                <span className="stat-number">100%</span>
-                <span className="stat-label">Client Satisfaction</span>
-              </div>
+              
             </motion.div>
           </motion.div>
         </motion.div>

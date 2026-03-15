@@ -7,28 +7,46 @@ import About from './sections/About.jsx';
 import Skills from './sections/Skills.jsx';
 import Projects from './sections/Projects.jsx';
 import Contact from './sections/Contact.jsx';
-
+import cruxlangImg from './assets/Cruxlang img.png'
+import FintrekImg from './assets/Fintrek.png'
+import RecipieReccom from './assets/Recipie recommendation.png'
+import CEP from './assets/CEP.png'
+import SNA from './assets/SNA.png'
 const projects = [
   {
-    title: 'Moonshot App',
-    description: 'A next-gen productivity tool with AI integration.',
-    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80',
+    title: 'Cruxlang',
+    description: 'A Rust Based Compiler ',
+      image: cruxlangImg,
     live: 'https://your-moonshot-app.com',
-    github: 'https://github.com/your/moonshot-app',
+    github: 'https://github.com/just-rsr/CruxLang',
   },
   {
-    title: 'Stellar Blog',
-    description: 'A blazing fast, modern blog platform.',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80',
+    title: 'Recipie Recommendation System',
+    description: 'A Recipie Recommendation platform.',
+    image: RecipieReccom,
     live: 'https://your-stellar-blog.com',
-    github: 'https://github.com/your/stellar-blog',
+    github: 'https://github.com/just-rsr/Recipie-Recommendation-System',
   },
   {
-    title: 'Nebula Portfolio',
+    title: 'Fintrek - Personal Finance Tracker',
     description: 'A portfolio template that stands out.',
-    image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80',
+    image: FintrekImg,
     live: 'https://your-nebula-portfolio.com',
-    github: 'https://github.com/your/nebula-portfolio',
+    github: 'https://github.com/just-rsr/Fintrek',
+  },
+   {
+    title: 'Carbon Emission Predictor ',
+    description: 'A Machine Learning Based Carbon Emission Predicter ',
+    image: CEP,
+    live: 'https://your-moonshot-app.com',
+    github: 'https://github.com/just-rsr/Carbon-Emission-Predictor',
+  },
+  {
+    title: 'Secure Notes Application  ',
+    description: 'A Java Based Secure Notes Application',
+    image: SNA,
+    live: 'https://your-moonshot-app.com',
+    github: 'https://github.com/just-rsr/Secure-Notes-Application',
   },
 ];
 
@@ -49,8 +67,8 @@ export default function App() {
           <Skills />
           <Projects projects={projects} />
           <Contact />
-        </div>
+      </div>
       )}
-    </div>
+      </div>
   );
 }

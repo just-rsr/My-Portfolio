@@ -30,22 +30,22 @@ export default function Contact() {
     {
       icon: '📧',
       label: 'Email',
-      value: 'jesse@email.com',
-      link: 'mailto:jesse@email.com',
+      value: 'hi.ranitworks@gmail.com',
+      link: 'hi.ranitworks@email.com',
       color: '#FF6A00'
     },
     {
       icon: '💼',
       label: 'LinkedIn',
-      value: 'linkedin.com/in/jesse',
-      link: 'https://linkedin.com/in/jesse',
+      value: 'linkedin.com/in/ranit-srivastava',
+      link: 'https://www.linkedin.com/in/ranit-srivastava/',
       color: '#0077B5'
     },
     {
       icon: '🐙',
       label: 'GitHub',
-      value: 'github.com/jesse',
-      link: 'https://github.com/jesse',
+      value: 'github.com/just-rsr',
+      link: 'https://github.com/just-rsr',
       color: '#333'
     }
   ];
@@ -133,7 +133,7 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <motion.a
-              href="mailto:jesse@email.com"
+              href="mailto:hi.ranitworks@gmail.com?subject=Opportunity%20for%20you"
               className="contact-button"
               whileHover={{ 
                 scale: 1.05, 
