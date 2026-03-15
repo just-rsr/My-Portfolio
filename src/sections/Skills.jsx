@@ -108,18 +108,16 @@ export default function Skills() {
                 {skill.icon}
               </div>
               <div className="skill-name">{skill.name}</div>
-              <motion.div 
-                className="skill-level"
-                initial={{ width: 0 }}
-                whileInView={{ width: `${skill.level}%` }}
-                transition={{ duration: 1, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div 
+              <div className="skill-level">
+                <motion.div 
                   className="skill-progress"
                   style={{ backgroundColor: skill.color }}
-                ></div>
-              </motion.div>
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${skill.level}%` }}
+                  transition={{ duration: 1, delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                />
+              </div>
               <span className="skill-percentage">{skill.level}%</span>
             </motion.div>
           ))}
