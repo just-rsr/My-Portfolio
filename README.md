@@ -1,12 +1,40 @@
-# React + Vite
+# Ranit Srivastava — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with React, Three.js, and Framer Motion.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** + **Vite**
+- **Three.js** via `@react-three/fiber` and `@react-three/drei` — 3D hero scene
+- **Framer Motion** — animations and scroll-triggered reveals
 
-## Expanding the ESLint configuration
+## Sections
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Hero** — 3D animated torus knot with text overlay
+- **About** — bio and stats
+- **Skills** — 21 skills with animated progress bars
+- **Projects** — Cruxlang, Recipe Recommendation System, Fintrek, Carbon Emission Predictor, Secure Notes Application
+- **Contact** — email, LinkedIn, GitHub
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Live
+
+> Coming soon
+
+## Connect
+
+- GitHub: [github.com/just-rsr](https://github.com/just-rsr)
+- LinkedIn: [linkedin.com/in/ranit-srivastava](https://www.linkedin.com/in/ranit-srivastava/)
+- Email: hi.ranitworks@gmail.com
