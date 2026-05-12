@@ -3,11 +3,12 @@ import { useState, useEffect } from 'react';
 import DSAVisualizer from './components/DSAVisualizer.jsx';
 
 export default function Hero3D() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== 'undefined' ? window.innerWidth <= 768 : false
+  );
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth <= 768);
-    check();
     window.addEventListener('resize', check);
     return () => window.removeEventListener('resize', check);
   }, []);
