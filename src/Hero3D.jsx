@@ -1,7 +1,16 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import DSAVisualizer from './components/DSAVisualizer.jsx';
 
 export default function Hero3D() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
   return (
     <div className="hero-enhanced" style={{ 
       width: '100%', 
@@ -17,12 +26,12 @@ export default function Hero3D() {
       <div className="hero-left" style={{ 
         position: 'relative',
         zIndex: 2,
-        width: '50%',
+        width: isMobile ? '100%' : '50%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'flex-start',
-        padding: '0 clamp(2rem, 7vw, 8rem)',
+        padding: isMobile ? '0 1.5rem' : '0 clamp(2rem, 7vw, 8rem)',
       }}>
 
         {/* Name block */}
@@ -151,24 +160,25 @@ export default function Hero3D() {
         </motion.div>
       </div>
 
-      {/* RIGHT — DSA Visualizer panel */}
-      <motion.div
-        initial={{ opacity: 0, x: 40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 0.6, ease: 'easeOut' }}
-        className="hero-dsa-panel"
-        style={{
-          position: 'relative',
-          zIndex: 2,
-          width: '60%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '0 clamp(1rem, 3vw, 3rem)',
-        }}
-      >
-        <DSAVisualizer />
-      </motion.div>
+      {/* RIGHT — DSA Visualizer panel — hidden on mobile */}
+      {!isMobile && (
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.6, ease: 'easeOut' }}
+          style={{
+            position: 'relative',
+            zIndex: 2,
+            width: '60%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '0 clamp(1rem, 3vw, 3rem)',
+          }}
+        >
+          <DSAVisualizer />
+        </motion.div>
+      )}
 
       {/* Scroll Indicator */}
       <motion.div
