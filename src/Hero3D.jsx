@@ -1,23 +1,5 @@
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Environment, Float } from '@react-three/drei';
 import { motion } from 'framer-motion';
-
-function TorusKnot() {
-  return (
-    <Float speed={2} rotationIntensity={1} floatIntensity={2}>
-      <mesh castShadow receiveShadow>
-        <torusKnotGeometry args={[0.9, 0.35, 128, 32]} />
-        <meshStandardMaterial
-          color="#26d0ce"
-          metalness={0.7}
-          roughness={0.25}
-          emissive="#1a2980"
-          emissiveIntensity={0.2}
-        />
-      </mesh>
-    </Float>
-  );
-}
+import DSAVisualizer from './components/DSAVisualizer.jsx';
 
 export default function Hero3D() {
   return (
@@ -26,219 +8,169 @@ export default function Hero3D() {
       height: '100vh', 
       background: 'radial-gradient(circle at 60% 40%, #232946 0%, #16161a 100%)', 
       position: 'relative',
-      overflow: 'hidden'
+      overflow: 'hidden',
+      display: 'flex',
+      alignItems: 'center',
     }}>
-      {/* 3D Canvas */}
-      <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1 }}>
-        <Canvas shadows camera={{ position: [0, 0, 5], fov: 50 }}>
-          <ambientLight intensity={0.7} />
-          <directionalLight position={[5, 5, 5]} intensity={1.2} castShadow />
-          <TorusKnot />
-          <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={1.5} />
-          <Environment preset="city" />
-        </Canvas>
-      </div>
 
-      {/* Enhanced Text Overlay */}
-      <div className="hero-content-enhanced" style={{ 
-        position: 'absolute', 
-        top: 0, 
-        left: 0, 
-        width: '100%', 
-        height: '100%', 
+      {/* LEFT — text content */}
+      <div style={{ 
+        position: 'relative',
         zIndex: 2,
+        width: '50%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
-        padding: '0 2rem'
+        alignItems: 'flex-start',
+        padding: '0 clamp(2rem, 7vw, 8rem)',
       }}>
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          <motion.h1 
-            className="hero-title-enhanced"
-            style={{
-              fontSize: 'clamp(3rem, 8vw, 6rem)',
-              fontWeight: 900,
-              marginBottom: '1rem',
-              letterSpacing: '-0.02em',
-              background: 'linear-gradient(135deg, #ffd700 0%, #ff6a00 50%, #ff003c 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              animation: 'gradient-shift 3s ease-in-out infinite'
-            }}
-            animate={{ 
-              scale: [1, 1.02, 1],
-              filter: ['drop-shadow(0 0 10px rgba(255, 215, 0, 0.3))', 'drop-shadow(0 0 20px rgba(255, 215, 0, 0.6))', 'drop-shadow(0 0 10px rgba(255, 215, 0, 0.3))']
-            }}
-            transition={{ 
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >
-            RANIT SRIVASTAVA
-          </motion.h1>
-        </motion.div>
 
+        {/* Name block */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: 'easeOut' }}
+          style={{ lineHeight: 1 }}
         >
-          <motion.h2 
-            className="hero-subtitle-enhanced"
+          {/* "Ranit" — white */}
+          <div style={{
+            fontSize: 'clamp(4rem, 9vw, 8rem)',
+            fontWeight: 900,
+            color: '#ffffff',
+            letterSpacing: '-0.03em',
+            lineHeight: 0.95,
+          }}>
+            Ranit
+          </div>
+
+          {/* "Srivastava" — teal → purple gradient */}
+          <div style={{
+            fontSize: 'clamp(3.5rem, 8.5vw, 7.5rem)',
+            fontWeight: 900,
+            letterSpacing: '-0.03em',
+            lineHeight: 1.05,
+            background: 'linear-gradient(90deg, #06b6d4 0%, #6366f1 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            whiteSpace: 'nowrap',
+          }}>
+            Srivastava
+          </div>
+
+          {/* "Software Engineer" — teal, left, tight below Srivastava */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9, ease: 'easeOut' }}
             style={{
-              fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
+              marginTop: '0.5rem',
+              fontSize: 'clamp(1rem, 2vw, 1.4rem)',
+              fontWeight: 700,
               color: '#26d0ce',
-              marginBottom: '0.5rem',
-              fontWeight: 600
-            }}
-            animate={{ 
-              x: [0, 5, 0],
-            }}
-            transition={{ 
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut"
+              letterSpacing: '0.01em',
             }}
           >
             Software Engineer
-          </motion.h2>
-        </motion.div>
+          </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.5 }}
-        >
-          <motion.p 
-            className="hero-tagline-enhanced"
+          {/* Tagline — left, tight below Software Engineer */}
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.1, ease: 'easeOut' }}
             style={{
-              fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
+              marginTop: '0.5rem',
+              fontSize: 'clamp(0.85rem, 1.4vw, 1rem)',
               color: '#a8a8a8',
-              marginBottom: '2rem',
+              lineHeight: 1.7,
               fontWeight: 400,
-              maxWidth: '600px'
-            }}
-            animate={{ 
-              opacity: [0.8, 1, 0.8],
-            }}
-            transition={{ 
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut"
+              textAlign: 'left',
             }}
           >
-            Crafting digital experiences with modern technologies and creative solutions
+            Crafting digital experiences with 
+        modern technologies and creative solutions
           </motion.p>
         </motion.div>
 
+        {/* Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 2 }}
+          transition={{ duration: 0.8, delay: 1.5, ease: 'easeOut' }}
+          style={{ display: 'flex', gap: '3rem', marginLeft:'5rem', marginTop: '3rem', flexWrap: 'wrap', justifyContent: 'flex-start' }}
         >
           <a href="#projects">
-          <motion.button
-            className="hero-cta-enhanced"
+            <motion.button
+              className="hero-cta-enhanced"
+              style={{
+                background: 'linear-gradient(135deg, #6366f1, #06b6d4)',
+                color: 'white',
+                border: 'none',
+                padding: '1rem 2rem',
+                fontSize: '1.1rem',
+                fontWeight: 600,
+                borderRadius: '50px',
+                cursor: 'pointer',
+                boxShadow: '0 10px 30px rgba(99, 102, 241, 0.35)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
+              whileHover={{ scale: 1.05, y: -2, boxShadow: '0 15px 40px rgba(99, 102, 241, 0.4)' }}
+              whileTap={{ scale: 0.95 }}
+              animate={{ y: [0, -5, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <motion.span animate={{ x: [0, 5, 0] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}>
+                Explore My Work →
+              </motion.span>
+            </motion.button>
+          </a>
+
+          <motion.a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
-              background: 'linear-gradient(135deg, #ff6a00, #ff003c)',
-              color: 'white',
-              border: 'none',
+              background: 'transparent',
+              color: '#e0e0e0',
+              border: '1px solid rgba(255,255,255,0.3)',
               padding: '1rem 2rem',
               fontSize: '1.1rem',
               fontWeight: 600,
               borderRadius: '50px',
               cursor: 'pointer',
-              boxShadow: '0 10px 30px rgba(255, 106, 0, 0.3)',
-              position: 'relative',
-              overflow: 'hidden'
+              textDecoration: 'none',
+              display: 'inline-block'
             }}
-            whileHover={{ 
-              scale: 1.05,
-              y: -2,
-              boxShadow: '0 15px 40px rgba(255, 106, 0, 0.4)'
-            }}
+            whileHover={{ scale: 1.05, y: -2, borderColor: 'rgba(255,255,255,0.6)' }}
             whileTap={{ scale: 0.95 }}
-            animate={{ 
-              y: [0, -5, 0],
-            }}
-            transition={{ 
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
           >
-            <motion.span
-              animate={{ 
-                x: [0, 5, 0],
-              }}
-              transition={{ 
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            >
-              Explore My Work →
-            </motion.span>
-          </motion.button></a>
-        </motion.div>
-
-        {/* Floating Elements */}
-        <motion.div
-          className="floating-elements"
-          style={{
-            position: 'absolute',
-            top: '20%',
-            right: '10%',
-            fontSize: '2rem',
-            opacity: 0.3
-          }}
-          animate={{ 
-            y: [0, -20, 0],
-            rotate: [0, 10, 0]
-          }}
-          transition={{ 
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          ⚛️
-        </motion.div>
-
-        <motion.div
-          className="floating-elements"
-          style={{
-            position: 'absolute',
-            bottom: '30%',
-            left: '10%',
-            fontSize: '2rem',
-            opacity: 0.3
-          }}
-          animate={{ 
-            y: [0, 20, 0],
-            rotate: [0, -10, 0]
-          }}
-          transition={{ 
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          🚀
+            Resume ↓
+          </motion.a>
         </motion.div>
       </div>
 
+      {/* RIGHT — DSA Visualizer panel */}
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.6, ease: 'easeOut' }}
+        style={{
+          position: 'relative',
+          zIndex: 2,
+          width: '60%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '0 clamp(1rem, 3vw, 3rem)',
+        }}
+      >
+        <DSAVisualizer />
+      </motion.div>
+
       {/* Scroll Indicator */}
       <motion.div
-        className="scroll-indicator"
         style={{
           position: 'absolute',
           bottom: '2rem',
@@ -248,18 +180,13 @@ export default function Hero3D() {
           color: '#a8a8a8',
           fontSize: '1.5rem'
         }}
-        animate={{ 
-          y: [0, 10, 0],
-          opacity: [0.5, 1, 0.5]
-        }}
-        transition={{ 
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
+        animate={{ y: [0, 10, 0], opacity: [0.5, 1, 0.5] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
         ↓
       </motion.div>
     </div>
   );
-} 
+}
+
+

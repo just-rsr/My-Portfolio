@@ -1,0 +1,107 @@
+.pp-root {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #16161a 0%, #232946 100%);
+  padding: 2rem;
+  color: #e0e0e0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pp-back {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #e0e0e0;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  transition: all 0.2s;
+}
+.pp-back:hover { background: rgba(255,255,255,0.12); }
+
+.pp-header {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pp-title-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.pp-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 900;
+  margin: 0;
+  background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pp-difficulty { font-size: 0.9rem; font-weight: 700; }
+
+.pp-meta { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+
+.pp-tag {
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.pp-lc-link {
+  color: #6366f1;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+.pp-lc-link:hover { opacity: 0.8; }
+
+.pp-cards { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.pp-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid;
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+.pp-card:hover { background: rgba(255,255,255,0.06); }
+
+.pp-card-label {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.pp-card-content {
+  color: #c8c8c8;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.pp-derivation-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1rem;
+  object-fit: contain;
+  max-height: 600px;
+}
+
+@media (max-width: 768px) {
+  .pp-root { padding: 1rem; }
+}
+
+.pp-notfound { color: #a8a8a8; text-align: center; padding: 4rem; font-size: 1.2rem; }
+
+

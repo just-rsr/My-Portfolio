@@ -17,13 +17,13 @@ function AnimatedLogo() {
         width: 80,
         height: 80,
         borderRadius: '50%',
-        background: 'linear-gradient(135deg, #ffd700 0%, #ff6a00 50%, #ff003c 100%)',
+        background: 'linear-gradient(135deg, #6366f1 0%, #06b6d4 100%)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         fontSize: '2.5rem',
         color: 'white',
-        boxShadow: '0 0 30px rgba(255, 106, 0, 0.5)',
+        boxShadow: '0 0 30px rgba(99, 102, 241, 0.5)',
         position: 'relative',
         overflow: 'hidden'
       }}
@@ -54,8 +54,8 @@ function LoadingDots() {
             width: '12px',
             height: '12px',
             borderRadius: '50%',
-            background: 'linear-gradient(135deg, #ffd700 0%, #ff6a00 50%, #ff003c 100%)',
-            boxShadow: '0 0 10px rgba(255, 106, 0, 0.5)'
+            background: 'linear-gradient(135deg, #6366f1 0%, #06b6d4 100%)',
+            boxShadow: '0 0 10px rgba(99, 102, 241, 0.5)'
           }}
           animate={{
             scale: [1, 1.5, 1],
@@ -151,7 +151,7 @@ export default function Loader({ show = true }) {
                 fontSize: 'clamp(2rem, 5vw, 3rem)',
                 fontWeight: 900,
                 margin: '2rem 0 1rem 0',
-                background: 'linear-gradient(135deg, #ffd700 0%, #ff6a00 50%, #ff003c 100%)',
+                background: 'linear-gradient(135deg, #6366f1 0%, #06b6d4 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -211,7 +211,7 @@ export default function Loader({ show = true }) {
           </motion.div>
 
           {/* Progress Bar */}
-          <motion.div
+          <div
             style={{
               position: 'absolute',
               bottom: '3rem',
@@ -223,24 +223,22 @@ export default function Loader({ show = true }) {
               borderRadius: '2px',
               overflow: 'hidden'
             }}
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 2, delay: 0.5 }}
           >
             <motion.div
               style={{
                 width: '100%',
                 height: '100%',
-                background: 'linear-gradient(135deg, #ffd700 0%, #ff6a00 50%, #ff003c 100%)',
+                background: 'linear-gradient(135deg, #6366f1 0%, #06b6d4 100%)',
                 borderRadius: '2px'
               }}
               initial={{ x: '-100%' }}
               animate={{ x: '0%' }}
               transition={{ duration: 2, delay: 0.5 }}
             />
-          </motion.div>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
   );
 } 
+

@@ -53,7 +53,7 @@ export default function About() {
             whileHover={{ 
               scale: 1.05,
               rotateY: 10,
-              boxShadow: "0 25px 50px rgba(255, 106, 0, 0.4)"
+              boxShadow: "0 25px 50px rgba(99, 102, 241, 0.4)"
             }}
             transition={{ duration: 0.3 }}
           >
@@ -120,3 +120,4 @@ export default function About() {
     </section>
   );
 } 
+

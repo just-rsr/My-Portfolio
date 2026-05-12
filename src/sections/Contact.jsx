@@ -32,7 +32,7 @@ export default function Contact() {
       label: 'Email',
       value: 'hi.ranitworks@gmail.com',
       link: 'hi.ranitworks@email.com',
-      color: '#FF6A00'
+      color: '#6366f1'
     },
     {
       icon: '💼',
@@ -138,7 +138,7 @@ export default function Contact() {
               whileHover={{ 
                 scale: 1.05, 
                 y: -3,
-                boxShadow: "0 15px 35px rgba(255, 106, 0, 0.4)"
+                boxShadow: "0 15px 35px rgba(38, 208, 206, 0.4)"
               }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
@@ -162,3 +162,4 @@ export default function Contact() {
     </section>
   );
 } 
+
