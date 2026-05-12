@@ -13,11 +13,17 @@ import Certifications from './sections/Certifications.jsx';
 import Navbar from './components/Navbar.jsx';
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => !sessionStorage.getItem('loaded'));
+
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2200);
-    return () => clearTimeout(timer);
-  }, []);
+    if (loading) {
+      const timer = setTimeout(() => {
+        setLoading(false);
+        sessionStorage.setItem('loaded', '1');
+      }, 2200);
+      return () => clearTimeout(timer);
+    }
+  }, [loading]);
 
   return (
     <div className="portfolio-root">

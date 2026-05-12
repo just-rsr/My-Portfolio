@@ -29,7 +29,7 @@ export default function TopicPage() {
   return (
     <div className="tp-root">
       <div className="tp-header" style={{ borderColor: topic.color }}>
-        <button className="tp-back" onClick={() => navigate(-1)}>← Back</button>
+        <button className="tp-back" onClick={() => navigate('/#problem-solving')}>← Back</button>
         <div className="tp-header-content">
           <span className="tp-icon">{topic.icon}</span>
           <div>

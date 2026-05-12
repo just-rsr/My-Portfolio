@@ -27,7 +27,7 @@ export default function ProjectPage() {
 
   return (
     <div className="pp2-root">
-      <button className="pp2-back" onClick={() => navigate(-1)}>← Back</button>
+      <button className="pp2-back" onClick={() => navigate('/#projects')}>← Back</button>
 
       <motion.div
         className="pp2-header"

@@ -27,7 +27,7 @@ export default function SystemPage() {
 
   return (
     <div className="sp-root">
-      <button className="sp-back" onClick={() => navigate(-1)}>← Back</button>
+      <button className="sp-back" onClick={() => navigate('/#systems')}>← Back</button>
 
       <motion.div
         className="sp-header"
