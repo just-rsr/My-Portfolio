@@ -25,6 +25,19 @@ export default function App() {
     }
   }, [loading]);
 
+  // Scroll to section when navigating back with a hash
+  useEffect(() => {
+    if (!loading && window.location.hash) {
+      const id = window.location.hash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [loading]);
+
   return (
     <div className="portfolio-root">
       <Loader show={loading} />
