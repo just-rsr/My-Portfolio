@@ -14,7 +14,7 @@ export default function Hero3D() {
     }}>
 
       {/* LEFT — text content */}
-      <div style={{ 
+      <div className="hero-left" style={{ 
         position: 'relative',
         zIndex: 2,
         width: '50%',
@@ -156,6 +156,7 @@ export default function Hero3D() {
         initial={{ opacity: 0, x: 40 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.6, ease: 'easeOut' }}
+        className="hero-dsa-panel"
         style={{
           position: 'relative',
           zIndex: 2,

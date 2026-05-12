@@ -2010,3 +2010,20 @@ a:focus {
 
 
 
+
+/* Hero mobile — hide DSA panel, full width text */
+@media (max-width: 768px) {
+  .hero-dsa-panel {
+    display: none !important;
+  }
+
+  .hero-enhanced {
+    justify-content: center;
+  }
+
+  .hero-left {
+    width: 100% !important;
+    padding: 0 1.5rem !important;
+    align-items: flex-start !important;
+  }
+}
