@@ -69,7 +69,7 @@ export const systems = [
   },
   {
     id: 'uber-ride-matching',
-    title: 'Ride Matching System (Uber)',
+    title: 'RideGrid — Distributed Ride Matching Infrastructure',
     icon: '🚗',
     color: '#000000',
     tagline: 'Real-time geo-spatial driver matching under strict latency',
